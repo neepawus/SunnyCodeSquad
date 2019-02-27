@@ -1,0 +1,63 @@
+nav {
+    display:flex;
+    background:#333a35;
+    justify-content:flex-start;
+}
+
+#nav p {
+    margin: 4px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+
+}
+.container {
+    display: flex;
+    font-family: arial;
+    color: white;
+    font-size: 20px;
+}
+
+.box {
+    display:flex;
+    flex-direction:column;
+}
+
+#border {
+    border-bottom: 3px solid orange;
+}
+
+.desert {
+    width: 780px;
+    height: 477px;
+    background-image: url('images/desert780x477.jpg');
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    text-align: center;
+}
+
+.stream, .relax {
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+
+.stream {
+    width: 420px;
+    height: 240px;
+    background-image: url('images/stream420x240.jpg');
+}
+
+.relax {
+    width: 420px;
+    height: 237px;
+    background-image: url('images/relax420x237.jpg');
+}
+
+.desert h2 {
+    margin-bottom: 50px;
+}
+
+.stream h2, .relax h2 {
+    margin-left: 20px;
+}
