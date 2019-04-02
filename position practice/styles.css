@@ -1,0 +1,77 @@
+.container {
+    height: 400px;
+    width: 100%;
+    position: relative;
+    background-color: lightgrey;
+}
+
+.div0 {
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+}
+
+.div1 {
+    height: 100px;
+    width: 100px;
+    background-color: orange;
+    position: relative;
+    z-index: 5;
+}
+
+.div2 {
+    height: 100px;
+    width: 100px;
+    background-color: purple;
+    position: absolute;
+    top: 0;
+    right:0;
+}
+
+.div3 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.div4 {
+    height: 100px;
+    width: 100px;
+    background-color: pink;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.div5 {
+    height:100px;
+    width: 100px;
+    background-color:lightblue;
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+    z-index: 4;
+}
+
+.div6 {
+    height:100px;
+    width: 100px;
+    background-color: 
+    position: 
+}
+
+.divSun {
+    height:100px;
+    width: 100px;
+    background-color: yellow;
+    position: sticky;
+    left: 50%;
+    top: 80%
+}
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Amazon Price Generator</title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+    <script>
+        let item = prompt("What is the name of the item");
+        let basePrice = prompt("What is the base price?");
+        let searchEngine = prompt("Did user find the product through a search engine?")
+        let compare = prompt("Did user visit a comparison shopping site?");
+        let blackFriday = prompt("Is today Black Friday?");
+        let finalPrice = basePrice;
+//alertText is the message that we will show to the user
+//below is what we did in class
+        let alertText = "The base price for" + item + " is " + basePrice;
+        if (blackFriday === "yes") {
+            alertText += "Today is Black Friday, so we will lower the price by 25%. ";
+            finalPrice *=  0.75;
+}
+alertText +="The final price is " + finalPrice;
+alert(alertText)
+
+//below is what i was trying to figure out on my own
+        //if (searchEngine === "yes" || compare === "yes" || blackFriday === "yes") {
+          //  let finalPrice = basePrice + (basePrice * .01) - (basePrice * .10) - (basePrice * .25)
+           // alertText += "The base price for " + item + " is " + basePrice + ". We will increase the price by 1% to pay the search engine. This purchaser is a comparison shopper, so we will reduce the price by 10%. Since it's Black Friday, we will reduce the price by 25%. The final price is " + finalPrice + ".")
+
+            //message = message + "The purchaser came through a search engine, so we will increase the price by 1%. ";
+            //finalPrice = basePrice + (basePrice * .01);
+            // alert("The base price for " + item + " is " + basePrice + ". We will increase the price by 1% to pay the search engine. The final price is "  + finalPrice + ".")
+        };
+
+        //let searchEnginePrice = basePrice - (basePrice * .01);
+        //return (searchEnginePrice)
+        //alert("The base price for [item] is [basePrice]. We will increase the price by 1% to pay the search engine.")
+        //} else { }
+
+        //if (compare = "yes") {
+        //    let comparePrice = basePrice - (basePrice * .10)
+        //    alert("This purchaser is a comparison shopper, so we will reduce the price by 10%.")
+        //}
+        //if (blackFriday === "yes") {
+        //    let blackFridayPrice = basePrice - (basePrice * .25)
+        //    alert("Since it's Black Friday, we will reduce the price by 25%.")
+        //} else {
+        //    alert("(☞°ヮ°)☞ ☜(°ヮ°☜)")
+        //}
+
+ //script should alert something like the following:
+ //The base price for [item] is [basePrice]. 
+ //We will increase the price by 1% to pay the search engine. 
+ //This purchaser is a comparison shopper, so we will reduce the price by 10%. 
+ //Since it's Black Friday, we will reduce the price by 25%. 
+ //The final price is [finalPrice].
+
+ //if a statement is not true, it should not be included in the message.        
+
+
+
+//if (searchEngine ==="yes") {
+//    message=message + "The purchaser came through a search engine, so we will increase the price by 1%";
+//    finalPrice= finalPrice * 1.01;};
+
+
+//let alertText = ("The base price for " + item + " is " + basePrice + ". ");
+//if (searchEngine === "yes"){
+//            alertText += "We will increase the price by 1%.";}   
+
+    </script>
+</body>
+
+</html>
