@@ -30,9 +30,41 @@
 
             </select>
         </p>
+
+        <p>Width of wall:<input id="width" type="text"></p>
+        <p>Height of wall: <input id="height" type="text"></p>
+        <p>Does the Customer want premium paint?</p>
+        <input id="premiumYes" type="radio" value="yes" checked>Yes
+        <input id="premiumNo" type="radio" value="no">No</br>
+
         <p>Comments <input id="comments" type="text"></p>
         <button>Submit</button>
     </form>
+
+    <script>
+        let firstName = prompt("Please enter your first name.");
+        let lastName = prompt("Please enter your last name.");
+        let streetAddress = prompt("Please enter your street address");
+        let city = prompt("Please enter your city.");
+        let wallWidth = prompt("What is the width of the wall to be painted?");
+        let wallHeight = prompt("What is the height of the wall to be painted?");
+        let premiumPaint = prompt("Do you want premium paint?");
+        let squareFeet = wallWidth * wallHeight;
+        let cansOfPaint = squareFeet / 175;
+        let paintCost = 0
+        if (premiumPaint === "yes" || "Yes") {
+            paintCost = 20
+        } else if (premiumPaint === "no" || "No") {
+            paintCost = 15
+        }
+        paintCost = cansOfPaint * paintCost;
+        let totalCost = paintCost + (paintCost * .075);
+
+        let message = "Estimate for " + firstName + " " + lastName + " of " + streetAddress + " in " + city + ": \n The wall to be painted is " + wallWidth + " feet by " + wallHeight + " feet, or " + squareFeet + " square feet. This will require " + cansOfPaint.toFixed(2) + " cans of paint. The cost is $" + paintCost.toFixed(2) + " dollars, plus tax. Total estimated cost is $" + totalCost.toFixed(2) + ".";
+
+        alert(message);
+
+    </script>
 </body>
 
 </html>
