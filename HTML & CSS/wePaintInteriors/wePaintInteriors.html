@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WePaintInteriors</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+</head>
+
+<body>
+    <h1>WePaintInteriors - the interior painting pros</h1>
+    <p>We're excited to paint your room or office! Please fill out the form below to receive a quote:</p>
+    <form action="https://www.w3schools.com/action_page.php">
+        <p>First Name <input id="longform" type="text" placeholder="Ash"></p>
+        <p>Last Name <input id="longform" type="text" placeholder="Ketchum"></p>
+        <p>Email <input id="longform" type="email" placeholder="master@pokemon.com"></p>
+        <p>Address <input id="address" type="text" placeholder="Number and Street"></p>
+        <p><input id="citystatezip" type="text" placeholder="City"></p>
+        <p><input id="citystatezip" type="text" placeholder="State" maxlength="2"></p>
+        <p><input id="citystatezip" type="text" placeholder="Zip Code"></p>
+        <p>Desired start: <input id="start" type="text"></p>
+        <p>Time: <input id="time" type="text"></p>
+        <p>Desired paint color:
+            <select id="paint-select">
+                <option value="">Black</option>
+                <option value="">White</option>
+                <option value="">Light Blue</option>
+                <option value="">Yellow</option>
+                <option value="">Green</option>
+
+            </select>
+        </p>
+
+        <p>Width of wall:<input id="width" type="text"></p>
+        <p>Height of wall: <input id="height" type="text"></p>
+        <p>Does the Customer want premium paint?</p>
+        <input id="premiumYes" type="radio" value="yes" checked>Yes
+        <input id="premiumNo" type="radio" value="no">No</br>
+
+        <p>Comments <input id="comments" type="text"></p>
+        <button>Submit</button>
+    </form>
+
+    <script>
+        let firstName = prompt("Please enter your first name.");
+        let lastName = prompt("Please enter your last name.");
+        let streetAddress = prompt("Please enter your street address");
+        let city = prompt("Please enter your city.");
+        let wallWidth = prompt("What is the width of the wall to be painted?");
+        let wallHeight = prompt("What is the height of the wall to be painted?");
+        let premiumPaint = prompt("Do you want premium paint?");
+        let squareFeet = wallWidth * wallHeight;
+        let cansOfPaint = squareFeet / 175;
+        let paintCost = 0
+        if (premiumPaint === "yes" || "Yes") {
+            paintCost = 20
+        } else if (premiumPaint === "no" || "No") {
+            paintCost = 15
+        }
+        paintCost = cansOfPaint * paintCost;
+        let totalCost = paintCost + (paintCost * .075);
+
+        let message = "Estimate for " + firstName + " " + lastName + " of " + streetAddress + " in " + city + ": \n The wall to be painted is " + wallWidth + " feet by " + wallHeight + " feet, or " + squareFeet + " square feet. This will require " + cansOfPaint.toFixed(2) + " cans of paint. The cost is $" + paintCost.toFixed(2) + " dollars, plus tax. Total estimated cost is $" + totalCost.toFixed(2) + ".";
+
+        alert(message);
+
+    </script>
+</body>
+
+</html>
