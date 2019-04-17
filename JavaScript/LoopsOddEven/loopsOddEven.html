@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Loops: Odd or Even?</title>
+
+</head>
+
+<body>
+
+    <h1>Loops: Odd or Even?</h1>
+    <p>How many odd numbers?</p>
+    <p id="displayOdd"></p>
+    <p>How many even numbers?</p>
+    <p id="displayEven"></p>
+
+    <script>
+        let num1 = Number(prompt())
+        let num2 = Number(prompt())
+
+        let allNum = [];
+        let oddNum = [];
+        let evenNum = [];
+
+        for (i = num1; i <= num2; i++) {
+            allNum.push(i);
+        }
+        console.log(allNum);
+
+        for (n = 0; n < allNum.length; n++) {
+            if ((allNum[n]) % 2 === 0) {
+                oddNum.push(n);
+            } else {
+                evenNum.push(n);
+            }
+        }
+        document.getElementById("displayOdd").innerHTML = oddNum.length;
+
+        document.getElementById("displayEven").innerHTML = evenNum.length;
+
+    </script>
+</body>
+
+</html>
